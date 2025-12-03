@@ -66,6 +66,25 @@
     .features{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
     .chip{font-size:.85rem;background:var(--card);border:1px solid var(--border);padding:.25rem .55rem;border-radius:999px;color:var(--muted)}
 
+    /* Video */
+    .video-wrapper{
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+      margin-top: 0.8rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background:#000;
+    }
+    .video-wrapper iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     /* Team */
     .team{grid-template-columns:repeat( auto-fit, minmax(230px, 1fr) );}
     .card{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:16px;display:flex;flex-direction:column;gap:.7rem;transition:transform .18s ease, box-shadow .18s ease}
@@ -75,7 +94,7 @@
     .links{display:flex;gap:.6rem;flex-wrap:wrap}
     .iconbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .6rem;border-radius:10px;border:1px solid var(--border);text-decoration:none;background:transparent}
 
-    /* Gallery */
+    /* Gallery (placeholder if you add later) */
     .gallery{grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );}
     .gallery img{width:100%;height:200px;object-fit:cover;border-radius:14px;border:1px solid var(--border);background:#0a0f22}
 
@@ -110,7 +129,7 @@
       <div class="container">
         <span class="badge">🚀 Project</span>
         <h1 class="title">Introduction to Virtual Reality - Final Project</h1>
-        <p class="subtitle">Multiplayer Virtual Reality Experince.</p>
+        <p class="subtitle">Multiplayer Virtual Reality Experience.</p>
         <div class="cta">
           <a class="btn primary" href="#about">Learn more</a>
           <a class="btn" href="https://github.com/ugavr2025/final-project-website-kar" target="_blank" rel="noopener">View on GitHub</a>
@@ -124,10 +143,19 @@
         <div class="panel">
           <h2>About the Project</h2>
           <p>
-           Our project is a mixed reality application demonstrating spacial music visualization. Users will be able to play various percussion instruments while the world around them comes alive.
-
-           Demo Video: https://www.youtube.com/watch?v=_1edTbePXnA&feature=youtu.be
+            Our project is a mixed reality application demonstrating spatial music visualization.
+            Users will be able to play various percussion instruments while the world around them comes alive.
           </p>
+
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/_1edTbePXnA"
+              title="Project demo video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
           <div class="features">
             <span class="chip">C#</span>
             <span class="chip">Responsive</span>
@@ -139,7 +167,7 @@
           <ul>
             <li><strong>Team size:</strong> 3</li>
             <li><strong>Status:</strong> Draft</li>
-            <li><strong>Timeline:</strong> Tuesday, December 9, Noon - 3:00 PM </li>
+            <li><strong>Timeline:</strong> Tuesday, December 9, Noon - 3:00 PM</li>
           </ul>
         </div>
       </div>
@@ -174,12 +202,12 @@
             </div>
           </article>
 
-          <!-- Member Card 3 (optional) -->
+          <!-- Member Card 3 -->
           <article class="card">
             <img class="avatar" src="images/KaiHeadShot.jpg" alt="Member 3 headshot" />
             <h3>Kai DeMeritt</h3>
             <div class="role">Role / Focus Area</div>
-            <p>I am a Sophmore studying computer science at UGA. I really enjoy computers, badminton, working out, and listening to music.</p>
+            <p>I am a Sophomore studying computer science at UGA. I really enjoy computers, badminton, working out, and listening to music.</p>
             <div class="links">
               <a class="iconbtn" href="mailto:kaidemeritt@gmail.com">✉️ Email</a>
               <a class="iconbtn" href="https://github.com/kai-demeritt" target="_blank" rel="noopener">🐙 GitHub</a>
@@ -190,11 +218,25 @@
       </div>
     </section>
 
+    <!-- GALLERY (optional, since you had a nav link) -->
+    <section id="gallery">
+      <div class="container">
+        <h2>Photos</h2>
+        <div class="grid gallery">
+          <!-- Add your project images here -->
+          <!--
+          <img src="images/demo1.jpg" alt="Screenshot or photo from the project" />
+          <img src="images/demo2.jpg" alt="Another project view" />
+          -->
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT / LINKS -->
     <section id="contact">
       <div class="container panel">
         <h2>Get in Touch</h2>
-        <p>Questions or feedback? Reach out to any of the team members emails.</p>
+        <p>Questions or feedback? Reach out to any of the team members via email.</p>
       </div>
     </section>
   </main>
